@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Login</h1>
+<form method="post" action="{% url 'accounts:login' %}">
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+        <div>{{ form.non_field_errors }}</div>
+    {% endif %}
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" value="{{ form.username.value|default:'' }}" required />
+    {% if form.username.errors %}<div>{{ form.username.errors }}</div>{% endif %}
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" required />
+    {% if form.password.errors %}<div>{{ form.password.errors }}</div>{% endif %}
+
+    <label for="remember_me">Remember me</label>
+    <input id="remember_me" name="remember_me" type="checkbox" {% if form.remember_me.value %}checked{% endif %} />
+
+    <button type="submit">Sign In</button>
+</form>
+{% endblock %}

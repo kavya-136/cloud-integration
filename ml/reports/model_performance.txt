@@ -1,0 +1,42 @@
+======================================================================
+🤖 AI CLOUD COST OPTIMIZER - MODEL PERFORMANCE REPORT
+======================================================================
+
+MODEL CONFIGURATION
+----------------------------------------------------------------------
+Algorithm:              Random Forest Regressor
+Number of Trees:        100
+Max Depth:              15
+Features Used:          CPU, Memory, Tag, Cloud
+Target Variable:        Cost (Monthly Cloud Cost)
+
+DATA SPLIT
+----------------------------------------------------------------------
+Total Samples:          150
+Training Samples:       120 (80%)
+Testing Samples:        30 (20%)
+
+PERFORMANCE METRICS
+----------------------------------------------------------------------
+R² Score (Train):       0.8757 (87.57%)
+R² Score (Test):        0.7122 (71.22%)
+MAE (Train):            $7.81
+MAE (Test):             $13.30
+RMSE (Train):           $11.26
+RMSE (Test):            $16.36
+
+CROSS-VALIDATION RESULTS (5-Fold)
+----------------------------------------------------------------------
+Mean R² Score:          0.6944 (±0.0822)
+Mean MAE:               $12.94 (±$1.83)
+
+FEATURE IMPORTANCE
+----------------------------------------------------------------------
+Tag                    79.84%
+CPU                     9.93%
+Memory                  7.20%
+Cloud                   3.02%
+
+======================================================================
+✅ MODEL STATUS: READY FOR DEPLOYMENT
+======================================================================

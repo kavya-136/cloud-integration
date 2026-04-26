@@ -7,4 +7,6 @@ urlpatterns = [
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('ml/', include('ml.urls', namespace='ml')),
     path('optimizer/', include('optimizer.urls', namespace='optimizer')),
+    path('api/', include('api.urls')),   # 👈 ADD THIS LINE
+
 ]

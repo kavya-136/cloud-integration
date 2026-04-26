@@ -54,3 +54,14 @@ def logout_view(request):
     logout(request)
     messages.success(request, 'You have logged out successfully.')
     return redirect('accounts:login')
+from django.http import JsonResponse
+
+def predict_api(request):
+    cpu = float(request.GET.get('cpu', 10))
+    memory = float(request.GET.get('memory', 20))
+
+    return JsonResponse({
+        "cpu": cpu,
+        "memory": memory,
+        "status": "API working"
+    })

@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'ml',
     'optimizer',
     'dashboard',
+    'api'
 ]
 
 MIDDLEWARE = [
